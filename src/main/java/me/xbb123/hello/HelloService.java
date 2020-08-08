@@ -5,10 +5,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.stereotype.Service;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * @author xbb123
  */
@@ -18,23 +14,22 @@ public class HelloService {
     @Autowired
     ApplicationArguments arguments;
 
-//    @Value("${hello}")
-//    String[] helloValues;
+    @Value("${xbb123.name}")
+    String name;
 //
 //    @Value("${foo}")
 //    String fooValue;
 
     /**
-    * -hello=Hello -hello=World => ["Hello", "World"] => Hello, World
-    * @return
-    *
-    * */
+     * -hello=Hello -hello=World => ["Hello", "World"] => Hello, World
+     *
+     * @return
+     */
     public String getMessage() {
 //        List<String> helloValues = arguments.getOptionValues("hello");
 //        String collect = Arrays.stream(helloValues).collect(Collectors.joining(","));
 //        collect += " " + fooValue;
-        return "Hello World";
-//        return "Hello Spring Boot2.0";
+        return "Hello, " + name;
     }
 //    @PostConstruct
 //    public void init() {

@@ -2,17 +2,18 @@ package me.xbb123;
 
 import me.xbb123.hello.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.Banner;
 import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.devtools.RemoteSpringApplication;
-import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
+/**
+ *
+ *  SPRING_APPLICATION_JSON={"foo":"bar"}
+ */
 @SpringBootApplication
 @RestController
 public class Application {
