@@ -1,0 +1,17 @@
+xbb123:
+  name: daehoan YAML1
+---
+spring:
+  profiles: default
+xbb123:
+  name: daehoan Default
+---
+spring:
+  profiles: prod
+xbb123:
+  name: daehoan Prod
+---
+spring:
+  profiles: dev
+xbb123:
+  name: daehoan Dev
