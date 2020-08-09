@@ -1,8 +1,6 @@
 package me.xbb123.hello;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.ApplicationArguments;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,13 +10,8 @@ import org.springframework.stereotype.Service;
 public class HelloService {
 
     @Autowired
-    ApplicationArguments arguments;
+    Xbb123Properties xbb123Properties;
 
-    @Value("${xbb123.name}")
-    String name;
-//
-//    @Value("${foo}")
-//    String fooValue;
 
     /**
      * -hello=Hello -hello=World => ["Hello", "World"] => Hello, World
@@ -26,10 +19,7 @@ public class HelloService {
      * @return
      */
     public String getMessage() {
-//        List<String> helloValues = arguments.getOptionValues("hello");
-//        String collect = Arrays.stream(helloValues).collect(Collectors.joining(","));
-//        collect += " " + fooValue;
-        return "Hello, " + name;
+        return "Hello, " + xbb123Properties.getName() + " " + xbb123Properties.getList().size();
     }
 //    @PostConstruct
 //    public void init() {

@@ -1,17 +1,32 @@
-xbb123:
-  name: daehoan YAML1
----
-spring:
-  profiles: default
-xbb123:
-  name: daehoan Default
----
-spring:
-  profiles: prod
-xbb123:
-  name: daehoan Prod
----
-spring:
-  profiles: dev
-xbb123:
-  name: daehoan Dev
+#xbb123:
+#  name: daehoan YAML1
+#---
+#spring:
+#  profiles: default
+#xbb123:
+#  name: daehoan Default
+#  list:
+#    - name: my name
+#      descr: my description
+#    - name: another name
+#      descr: another description
+#---
+#spring:
+#  profiles: prod
+#xbb123:
+#  name: daehoan Prod
+#  list:
+#    - name: my name
+#      descr: my description
+#    - name: another name
+#      descr: another description
+#    - name: another name
+#      descr: another description
+#---
+#spring:
+#  profiles: dev
+#xbb123:
+#  name: daehoan Dev
+#  list:
+#    - name: my name
+#      descr: my description
