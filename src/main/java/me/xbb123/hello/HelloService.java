@@ -19,7 +19,8 @@ public class HelloService {
      * @return
      */
     public String getMessage() {
-        return "Hello, " + xbb123Properties.getName() + " " + xbb123Properties.getList().size();
+        return "Hello, " + xbb123Properties.getName() + " " + xbb123Properties.getList().size()
+                + " " + xbb123Properties.getFooBar() + " " + xbb123Properties.getWorkFor();
     }
 //    @PostConstruct
 //    public void init() {

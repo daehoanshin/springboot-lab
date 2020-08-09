@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Bean;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +31,6 @@ import org.springframework.core.env.MapPropertySource;
  */
 @SpringBootApplication
 @RestController
-@EnableConfigurationProperties(Xbb123Properties.class)
 public class Application {
 
     @Autowired
@@ -37,10 +39,22 @@ public class Application {
     @Autowired
     Environment environment;
 
+    @Bean
+    @ConfigurationProperties("xbb123")
+    @Validated
+    public Xbb123Properties xbb123Properties() {
+        return new Xbb123Properties();
+    }
+
     @RequestMapping("/")
     public String hello() {
         System.out.println(environment.getProperty("xbb123.list[0].name"));
         System.out.println(environment.getProperty("xbb123.name"));
+        System.out.println(environment.getProperty("xbb123.work-for"));
+        System.out.println(xbb123Properties().getWhereToGo());
+        System.out.println(xbb123Properties().getTime1()); // 1000ms
+        System.out.println(xbb123Properties().getTime2()); // 10h
+        System.out.println(xbb123Properties().getTime3()); // 10s
         return helloService.getMessage();
     }
 
