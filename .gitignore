@@ -1,3 +1,4 @@
 *.idea
 target/*
 /springbootday04.iml
+/logs/*

@@ -22,8 +22,4 @@ public class HelloService {
         return "Hello, " + xbb123Properties.getName() + " " + xbb123Properties.getList().size()
                 + " " + xbb123Properties.getFooBar() + " " + xbb123Properties.getWorkFor();
     }
-//    @PostConstruct
-//    public void init() {
-//        throw new RuntimeException("Intended Exception");
-//    }
 }
