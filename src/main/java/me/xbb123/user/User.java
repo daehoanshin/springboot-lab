@@ -1,11 +1,17 @@
 package me.xbb123.user;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Size;
+
 /**
  * @author xbb123
  */
 public class User {
+    @NotEmpty
     private String name;
+    @Size(min=10)
     private int age;
+    @Size(min = 50)
     private int height;
 
     public String getName() {
