@@ -2,10 +2,12 @@ package me.xbb123.user;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
+import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  * @author xbb123
  */
+@XmlRootElement
 public class User {
     @NotEmpty
     private String name;

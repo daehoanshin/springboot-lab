@@ -21,11 +21,11 @@ public class UserController {
      *
      * @return
     * */
-    @RequestMapping("/")
-    public @ResponseBody String index() {
-        converters.getConverters().forEach(c -> System.out.println(";;;;;;;; " + c.getClass()));
-        return "Hello Spring MVC";
-    }
+//    @RequestMapping("/")
+//    public @ResponseBody String index() {
+//        converters.getConverters().forEach(c -> System.out.println(";;;;;;;; " + c.getClass()));
+//        return "Hello Spring MVC";
+//    }
 
     @GetMapping("/user")
     public User currentUser() {
