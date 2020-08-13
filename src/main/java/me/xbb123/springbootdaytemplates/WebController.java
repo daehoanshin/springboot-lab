@@ -17,7 +17,7 @@ public class WebController {
     @GetMapping("${index.path}")
     public String hello(Model model, @RequestParam(defaultValue = "whiteship") String name) {
         model.addAttribute("name", name);
-        return "hello1";
+        return "hello";
     }
 
 

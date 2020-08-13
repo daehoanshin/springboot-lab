@@ -1,11 +1,7 @@
 package me.xbb123.user;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @author xbb123
@@ -13,8 +9,8 @@ import java.util.List;
 @RestController
 public class UserController {
 
-    @Autowired
-    HttpMessageConverters converters;
+//    @Autowired
+//    HttpMessageConverters converters;
 
     /**
      *  "main" -> ViewResolver -> View -> ContentNegotiatingViewResolver -> View
