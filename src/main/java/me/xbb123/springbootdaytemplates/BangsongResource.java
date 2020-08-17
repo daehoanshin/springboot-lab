@@ -1,11 +1,10 @@
 package me.xbb123.springbootdaytemplates;
 
-import org.springframework.hateoas.ResourceSupport;
-
 /**
  * @author xbb123
  */
-public class BangsongResource extends ResourceSupport {
+//public class BangsongResource extends ResourceSupport {
+public class BangsongResource {
     private String title;
 
     public String getTitle() {

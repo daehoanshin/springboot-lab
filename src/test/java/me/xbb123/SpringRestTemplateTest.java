@@ -16,8 +16,8 @@ import static org.mockito.BDDMockito.given;
 /**
  * @author xbb123
  */
-@RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+/*@RunWith(SpringRunner.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)*/
 public class SpringRestTemplateTest {
 
     @Autowired

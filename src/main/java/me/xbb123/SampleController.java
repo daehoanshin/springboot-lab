@@ -10,13 +10,12 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @author xbb123
  */
-@RestController
 public class SampleController {
     private Logger logger = LoggerFactory.getLogger(SampleController.class);
     @Autowired
     SampleService sampleService;
 
-    @GetMapping("/foo")
+    @GetMapping("/foo1")
     public String foo() {
         logger.info("Hello World");
         return sampleService.getName();

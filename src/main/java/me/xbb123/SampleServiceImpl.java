@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 /**
  * @author xbb123
  */
-@Service("sampleService")
+//@Service("sampleService")
 public class SampleServiceImpl implements SampleService {
     RestTemplate restTemplate;
 

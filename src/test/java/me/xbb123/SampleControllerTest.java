@@ -27,9 +27,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-@RunWith(SpringRunner.class)
+/*@RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-@AutoConfigureMockMvc
+@AutoConfigureMockMvc*/
 public class SampleControllerTest {
 
    /* @Configuration
@@ -46,7 +46,7 @@ public class SampleControllerTest {
     @LocalServerPort
     int port;
 
-    @Autowired
+//    @Autowired
     WebTestClient webTestClient;
 
 
@@ -59,7 +59,7 @@ public class SampleControllerTest {
     @Autowired
     TestRestTemplate testRestTemplate;*/
 
-    @MockBean
+//    @MockBean
     SampleService sampleService;
 
     /*@Test
@@ -75,7 +75,7 @@ public class SampleControllerTest {
                 .andDo(print());
     }*/
 
-    @Test
+//    @Test
     public void testFooWithWebTestClient() {
         System.out.println(sampleService.getNumber());
         given(sampleService.getName()).willReturn("Spy");

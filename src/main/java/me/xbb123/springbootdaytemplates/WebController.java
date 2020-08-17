@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * @author xbb123
  */
-@Controller
+//@Controller
 public class WebController {
     /**
      * ViewName (String) --> ViewResolver --> View (View)

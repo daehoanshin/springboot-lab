@@ -15,8 +15,8 @@ import static org.springframework.test.web.client.response.MockRestResponseCreat
 /**
  * @author xbb123
  */
-@RunWith(SpringRunner.class)
-@RestClientTest(SampleServiceImpl.class)
+/*@RunWith(SpringRunner.class)
+@RestClientTest(SampleServiceImpl.class)*/
 public class SampleServiceTest {
     @Autowired
     SampleService sampleService;

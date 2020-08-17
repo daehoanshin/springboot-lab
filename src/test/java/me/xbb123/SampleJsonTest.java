@@ -19,8 +19,8 @@ import static org.springframework.boot.test.json.JacksonTester.initFields;
 /**
  * @author xbb123
  */
-@RunWith(SpringRunner.class)
-@JsonTest
+/*@RunWith(SpringRunner.class)
+@JsonTest*/
 public class SampleJsonTest {
 
     JacksonTester<Sample> sampleJacksonTester;
