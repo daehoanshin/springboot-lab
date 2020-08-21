@@ -3,8 +3,11 @@ package me.xbb123;
 import me.xbb123.book.Book;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.security.reactive.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
+import org.springframework.security.config.web.server.ServerHttpSecurity;
+import org.springframework.security.web.server.SecurityWebFilterChain;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Flux;
@@ -20,6 +23,17 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
+    }
+
+    @Bean
+    public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+        http
+                .authorizeExchange()
+                .matchers(PathRequest.toStaticResources().atCommonLocations()).permitAll()
+                .pathMatchers("/my/hello.html").permitAll()
+                .anyExchange().authenticated().and()
+                .formLogin();
+        return http.build();
     }
 
     @Bean
