@@ -2,3 +2,6 @@
 */target/*
 */logs/*
 *.iml
+*.cmd
+*.db
+*/.mvn/*
