@@ -12,7 +12,7 @@ import java.util.Date;
  * @author xbb123
  */
 @Component
-public class DefaultDataPopulator implements ApplicationRunner {
+public class DefaultDataPopulator {
     @Autowired
     MeetingRepository meetingRepository;
 
@@ -22,7 +22,7 @@ public class DefaultDataPopulator implements ApplicationRunner {
     @Autowired
     DSLContext dsl;
 
-    @Override
+   /* @Override
     public void run(ApplicationArguments args) throws Exception {
         Person person = new Person();
         person.setEmail("dhshin@email.com");
@@ -36,5 +36,5 @@ public class DefaultDataPopulator implements ApplicationRunner {
         meeting.setLocation("seoul");
         meetingRepository.save(meeting);
         
-    }
+    }*/
 }
