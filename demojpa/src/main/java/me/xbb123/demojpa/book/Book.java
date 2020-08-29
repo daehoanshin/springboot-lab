@@ -6,25 +6,27 @@ import java.util.Date;
 @Entity
 public class Book {
     @Id @GeneratedValue
-    private Long id;
-    private String name;
+    private Integer  id;
+    private String title;
     @Temporal(TemporalType.TIMESTAMP)
     private Date created;
+    @Column(unique = false)
+    private String isbn;
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public Date getCreated() {
@@ -33,5 +35,13 @@ public class Book {
 
     public void setCreated(Date created) {
         this.created = created;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 }
